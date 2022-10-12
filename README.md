@@ -6,20 +6,25 @@
 
 ## ELO Algorithm
 
-#### I based this 4 player ELO off of the standard 2-player ELO Algorithm used on most chess websites:
+### I based this 4-player ELO off of the standard 2-player ELO Algorithm used on most chess websites:
 
 ![2p ELO](images/2p-ELO.png) <img src="images/2p-Rating.png" alt="2P New Rating" width="300"/>
 ##### E<sub>a</sub> = probability of player 'a' winning
 ##### R<sub>a</sub> = Rating of player 'a'; R<sub>b</sub> = Rating of player 'b'
 ##### R<sub>A</sub> = Rating before; R<sup>'</sup><sub>A</sub> = Rating After
-##### S<sub>A</sub> = 1 if player is winner; S<sub>A</sub> = 1 if player is loser
+##### S<sub>A</sub> = `1` if player is winner; S<sub>A</sub> = `0` if player is loser
 
-#### The resulting 4-player version of this alogirthm is as follows
+### The resulting 4-player version of this alogirthm is as follows:
 
-### E<sub>a1</sub> = ((1/1+10<sup>(r<sub>2</sub>-r<sub>1</sub>)/400</sup>)+(1/1+10<sup>(r<sub>3</sub>-r<sub>1</sub>)/400</sup>)+(1/1+10<sup>(r<sub>4</sub>-r<sub>1</sub>)/400</sup>))/6
-### E<sub>a2</sub> = ((1/1+10<sup>(r<sub>1</sub>-r<sub>2</sub>)/400</sup>)+(1/1+10<sup>(r<sub>3</sub>-r<sub>2</sub>)/400</sup>)+(1/1+10<sup>(r<sub>4</sub>-r<sub>2</sub>)/400</sup>))/6
-### E<sub>a3</sub> = ((1/1+10<sup>(r<sub>1</sub>-r<sub>3</sub>)/400</sup>)+(1/1+10<sup>(r<sub>2</sub>-r<sub>3</sub>)/400</sup>)+(1/1+10<sup>(r<sub>4</sub>-r<sub>3</sub>)/400</sup>))/6
-### E<sub>a4</sub> = ((1/1+10<sup>(r<sub>1</sub>-r<sub>4</sub>)/400</sup>)+(1/1+10<sup>(r<sub>2</sub>-r<sub>4</sub>)/400</sup>)+(1/1+10<sup>(r<sub>3</sub>-r<sub>4</sub>)/400</sup>))/6
+### E<sub>a1</sub> = (1/(1+10<sup>(r<sub>2</sub>-r<sub>1</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>3</sub>-r<sub>1</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>4</sub>-r<sub>1</sub>)/400</sup>))/6
+### E<sub>a2</sub> = (1/(1+10<sup>(r<sub>1</sub>-r<sub>2</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>3</sub>-r<sub>2</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>4</sub>-r<sub>2</sub>)/400</sup>))/6
+### E<sub>a3</sub> = (1/(1+10<sup>(r<sub>1</sub>-r<sub>3</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>2</sub>-r<sub>3</sub>)/400</sup>) + 1/(1+10<sup>r<sub>4</sub>-r<sub>3</sub>)/400</sup>))/6
+### E<sub>a4</sub> = (1/(1+10<sup>(r<sub>1</sub>-r<sub>4</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>2</sub>-r<sub>4</sub>)/400</sup>) + 1/(1+10<sup>(r<sub>3</sub>-r<sub>4</sub>)/400</sup>))/6
+
+#### R<sup>'</sup><sub>A1</sub> = round(R<sub>A1</sub> + k(S<sub>A</sub> - E<sub>a1</sub>))
+#### R<sup>'</sup><sub>A2</sub> = round(R<sub>A2</sub> + k(S<sub>A</sub> - E<sub>a2</sub>))
+#### R<sup>'</sup><sub>A3</sub> = round(R<sub>A3</sub> + k(S<sub>A</sub> - E<sub>a3</sub>)) 
+#### R<sup>'</sup><sub>A4</sub> = round(R<sub>A4</sub> + k(S<sub>A</sub> - E<sub>a4</sub>))
 
 ## Instructions
 
