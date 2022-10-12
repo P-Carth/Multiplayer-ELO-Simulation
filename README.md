@@ -20,7 +20,7 @@
 
 ![NFT Game](images/histogram.png)
 
-> While I was successful in creating a 4-Player ELO System, it does seem that there is a consistent skew to the right. Fortunately, for my purposes this is not an issue.
+> While I was successful in creating a normally distributed 4-Player ELO System, it does seem that there is a consistent skew to the right. Fortunately, for my purposes this is not an issue.
 
 > This algorithm can be applied to a number of scenarios to compare competitors in an adjusted and fair manner. For example, I applied this algorithm to an NFT game that I made with Flask that allows users to vote on their favorite NFT (<i>shown below<i>).
 
