@@ -9,8 +9,8 @@
 ### I based this 4-player ELO off of the standard 2-player ELO Algorithm used on most chess websites:
 
 ![2p ELO](images/2p-ELO.png) <img src="images/2p-Rating.png" alt="2P New Rating" width="300"/>
-##### E<sub>a</sub> = probability of player 'a' winning
-##### R<sub>a</sub> = Rating of player 'a'; R<sub>b</sub> = Rating of player 'b'
+##### E<sub>a</sub> = probability of `player a` winning
+##### R<sub>a</sub> = Rating of `player a`; R<sub>b</sub> = Rating of `player b`
 ##### R<sub>A</sub> = Rating before; R<sup>'</sup><sub>A</sub> = Rating After
 ##### S<sub>A</sub> = `1` if player is winner; S<sub>A</sub> = `0` if player is loser
 
