@@ -1,8 +1,7 @@
-# 4-Player ELO Simulation
-
-### This simulation takes in 2 parameters: `# of competitors` & `# of rounds`
-
-#### I wanted to create a game that allows a user to pick their favorite choice out of four options. By picking their favorite, the winning compitor should go up in rank, while the losing compitors propotionately decrease in rank.
+# <p align='center'> 4-Player ELO Simulation </p>
+## Scope
+> ### I wanted to create a game that allows a user to pick their favorite choice out of four options. By picking their favorite, the winning compitor should go up in rank, while the losing compitors propotionately decrease in rank.
+> ### This simulation takes in 2 parameters: `# of competitors` & `# of rounds`
 
 ## ELO Algorithm
 
